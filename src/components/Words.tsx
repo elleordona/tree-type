@@ -29,7 +29,7 @@ export const Words = () => {
     return (
         <div
             id="words"
-            className="roboto-mono text-2xl/10 max-h-30 flex flex-wrap overflow-hidden"
+            className="flex flex-wrap overflow-hidden max-h-40 blur-xs in-focus:blur-none text-neutral-600"
         >
             {wordsArray.map((word, index) => (
                 <div
@@ -37,7 +37,9 @@ export const Words = () => {
                     id={`word${index}`}
                     className='inline-block me-4'
                 >
-                    {word}
+                    {word.split('').map((char, index) => (
+                        <span key={index}>{char}</span>
+                    ))}
                 </div>
             ))}
         </div>
