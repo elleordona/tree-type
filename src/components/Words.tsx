@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import wordsData from '../assets/words.json';
+import { faker } from '@faker-js/faker';
 
 export const Words = () => {
     const [wordsArray, setWordsArray] = useState<string[]>([]);
 
-    const words = wordsData.words.split(' ');
+    const words = faker.word.words(200).split(' ');
     const wordsCount = words.length;
 
     useEffect(() => {
