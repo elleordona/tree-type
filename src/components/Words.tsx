@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import { faker } from '@faker-js/faker';
+import { useEffect, useState } from "react";
+import { faker } from "@faker-js/faker";
 
 export const Words = () => {
     const [wordsArray, setWordsArray] = useState<string[]>([]);
 
-    const words = faker.word.words(200).split(' ');
+    const words = faker.word.words(200).split(" ");
     const wordsCount = words.length;
 
     useEffect(() => {
@@ -35,9 +35,9 @@ export const Words = () => {
                 <div
                     key={index}
                     id={`word${index}`}
-                    className='inline-block me-4'
+                    className="inline-block me-4"
                 >
-                    {word.split('').map((char, index) => (
+                    {word.split("").map((char, index) => (
                         <span key={index}>{char}</span>
                     ))}
                 </div>
