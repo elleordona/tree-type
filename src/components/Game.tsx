@@ -1,4 +1,5 @@
 import { cn } from "../lib/utils";
+import { RestartButton } from "./RestartButton";
 import { Words } from "./Words"
 
 export const Game = () => {
@@ -20,11 +21,9 @@ export const Game = () => {
                     Click here to focus
                 </div>
             </div>
-            <button
-                className="custom-button"
-            >
-                New Game
-            </button>
+            <RestartButton
+                onRestart={() => null}
+            />
         </div>
         );
 };

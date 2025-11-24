@@ -13,7 +13,7 @@ export const Home = () => {
             <Navbar />
 
             {/* Main Content */}
-            <Header />
+            <Header timeLeft={30}/>
             <Game />
 
             {/* Footer */}

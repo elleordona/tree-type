@@ -1,4 +1,4 @@
-export const Header = () => {
+export const Header = ({ timeLeft }:{ timeLeft: number }) => {
     return (
         <div
             id="header"
@@ -8,7 +8,7 @@ export const Header = () => {
                 id="timer"
                 className="text-primary text-2xl font-bold text-left"
             >
-                30
+                Time: {timeLeft}
             </div>
         </div>
     );
